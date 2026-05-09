@@ -15,7 +15,7 @@ import { CATEGORIES, MENU_ITEMS } from '../data';
 import CategoryBar from '../components/CategoryBar';
 import ProductCard from '../components/ProductCard';
 
-export default function HomeScreen() {
+export default function HomeScreen({ onToggleMenu, onExplore }) {
   const [selectedCategory, setSelectedCategory] = useState('1');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -27,12 +27,12 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="dark-content" />
       
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity style={styles.iconBtn}>
-          <MenuIcon color={COLORS.white} size={24} />
+        <TouchableOpacity style={styles.iconBtn} onPress={onToggleMenu}>
+          <MenuIcon color={COLORS.text} size={24} />
         </TouchableOpacity>
         <View style={styles.logoContainer}>
           <Text style={styles.logoText}>SUPA</Text>
@@ -67,6 +67,10 @@ export default function HomeScreen() {
         onSelect={setSelectedCategory} 
       />
 
+      <TouchableOpacity style={styles.exploreBtn} onPress={onExplore}>
+        <Text style={styles.exploreBtnText}>Explore Nearby Restaurants →</Text>
+      </TouchableOpacity>
+
       {/* Menu Grid */}
       <FlatList
         data={filteredItems}
@@ -92,7 +96,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    backgroundColor: COLORS.white,
   },
   header: {
     flexDirection: 'row',
@@ -113,7 +117,7 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '900',
     letterSpacing: 1,
-    color: COLORS.white,
+    color: COLORS.secondary,
   },
   cartBtn: {
     padding: 8,
@@ -125,14 +129,14 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -4,
     right: -4,
-    backgroundColor: COLORS.accent,
+    backgroundColor: COLORS.secondary,
     width: 18,
     height: 18,
     borderRadius: 9,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 2,
-    borderColor: COLORS.background,
+    borderColor: COLORS.white,
   },
   badgeText: {
     color: COLORS.white,
@@ -151,9 +155,22 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     height: 50,
   },
+  exploreBtn: {
+    backgroundColor: COLORS.primary,
+    marginHorizontal: SPACING.md,
+    marginVertical: SPACING.sm,
+    padding: 15,
+    borderRadius: 12,
+    alignItems: 'center',
+  },
+  exploreBtnText: {
+    color: COLORS.white,
+    fontWeight: '700',
+    fontSize: 16,
+  },
   searchInput: {
     flex: 1,
-    color: COLORS.white,
+    color: COLORS.text,
     marginLeft: 10,
     fontSize: 16,
   },
@@ -171,7 +188,7 @@ const styles = StyleSheet.create({
     marginVertical: SPACING.md,
   },
   listTitle: {
-    color: COLORS.white,
+    color: COLORS.text,
     fontSize: 20,
     fontWeight: '700',
   },

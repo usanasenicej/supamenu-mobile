@@ -7,6 +7,69 @@ export const CATEGORIES = [
   { id: '6', name: 'Desserts', icon: 'CakeSlice' },
 ];
 
+export const RESTAURANTS = [
+  {
+    id: '1',
+    name: 'Choose Kigali',
+    address: 'World, African, Pizzeria, Coffee',
+    rating: 4.8,
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: '2',
+    name: 'Heaven Restaurant',
+    address: 'African, International, Wine Bar',
+    rating: 4.9,
+    image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: '3',
+    name: 'The Hut',
+    address: 'Asian, Fusion, Indian',
+    rating: 4.7,
+    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop',
+  },
+  {
+    id: '4',
+    name: 'Pili Pili',
+    address: 'Grill, Pizza, European',
+    rating: 4.6,
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop',
+  },
+];
+
+export const MENU_CATEGORIES = [
+  { id: '1', name: 'Appetizer' },
+  { id: '2', name: 'Starter' },
+  { id: '3', name: 'Main' },
+  { id: '4', name: 'Dessert' },
+  { id: '5', name: 'Drink' },
+];
+
+export const DRINKS = [
+  {
+    id: 'd1',
+    name: 'Tom Yummy',
+    price: 5000,
+    description: 'Kaffir Lime Vodka, Lemongrass, Ginger, Citrus',
+    priceUsd: 12.5,
+  },
+  {
+    id: 'd2',
+    name: 'Singapore Sling',
+    price: 5000,
+    description: 'Gin, Benedictine, Citrus, Cucumber',
+    priceUsd: 12.5,
+  },
+  {
+    id: 'd3',
+    name: 'White Russian',
+    price: 6000,
+    description: 'Vanilla, Coffee and Chocolate with hints of Orange',
+    priceUsd: 12.5,
+  },
+];
+
 export const MENU_ITEMS = [
   {
     id: '1',
@@ -25,41 +88,5 @@ export const MENU_ITEMS = [
     rating: 4.9,
     image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop',
     description: 'Fresh Atlantic salmon, avocado, edamame, and our signature spicy soy dressing.',
-  },
-  {
-    id: '3',
-    name: 'Burrata Margherita',
-    category: 'Pizza',
-    price: 16.00,
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop',
-    description: 'San Marzano tomatoes, fresh burrata, basil, and extra virgin olive oil.',
-  },
-  {
-    id: '4',
-    name: 'Truffle Mac & Cheese',
-    category: 'Pasta',
-    price: 14.50,
-    rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=800&auto=format&fit=crop',
-    description: 'Creamy three-cheese sauce, black truffle oil, and a crispy panko topping.',
-  },
-  {
-    id: '5',
-    name: 'Passionfruit Mojito',
-    category: 'Drinks',
-    price: 9.00,
-    rating: 4.5,
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop',
-    description: 'Fresh mint, lime, passionfruit puree, and premium white rum.',
-  },
-  {
-    id: '6',
-    name: 'Lava Chocolate Cake',
-    category: 'Desserts',
-    price: 12.00,
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=800&auto=format&fit=crop',
-    description: 'Warm chocolate cake with a molten center, served with vanilla bean gelato.',
   },
 ];
