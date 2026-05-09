@@ -1,14 +1,14 @@
 export const COLORS = {
-  primary: '#F59E0B', // Amber
-  secondary: '#10B981', // Emerald
-  background: '#0F172A', // Slate 900
-  surface: '#1E293B', // Slate 800
-  text: '#F8FAFC', // Slate 50
-  textSecondary: '#94A3B8', // Slate 400
-  accent: '#EC4899', // Pink
+  primary: '#FF9C27', // SupaMenu Orange
+  secondary: '#000000', // Black
+  background: '#FFFFFF', // Light mode bg (from screenshots)
+  darkBackground: '#000000', // Dark mode bg (from screenshots)
+  surface: '#F8F9FA',
+  text: '#1A1A1A',
+  textSecondary: '#6B7280',
   white: '#FFFFFF',
-  black: '#000000',
-  card: '#1e293b',
+  border: '#E5E7EB',
+  error: '#EF4444',
 };
 
 export const SPACING = {
